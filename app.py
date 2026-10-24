@@ -136,6 +136,8 @@ if st.button("prediction weidth"):
                 cv=kfold,
                 scoring="neg_mean_absolute_error"
             )
+        mae_each_fold = -score
+        avrage_mae = mae_each_fold.mean()
         model.fit(x,y)
         st.write(f"training model with data:{len(x)}")
         new_human = pd.DataFrame([{
@@ -146,6 +148,14 @@ if st.button("prediction weidth"):
         prediction = model.predict(new_human)
         st.subheader("prediction result:")
         st.success(f"prediction weidth:{prediction[0]:.1f} kg")
+        st.metric(
+            label="mae for error prediction",
+            value=f"{avrage_mae:.2f} kg"
+        )
+        st.caption(
+            "this is value for mean absolute error"
+            "number is low for error lowers"
+        )
         mae = -score.mean()
         knn_model = Pipeline([
             ("preprocessor",preproc),
