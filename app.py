@@ -145,6 +145,7 @@ if st.button("prediction weidth"):
         }])
         prediction = model.predict(new_human)
         st.subheader("prediction result:")
+        st.success(f"prediction weidth:{prediction[0]:.1f} kg")
         mae = -score.mean()
         knn_model = Pipeline([
             ("preprocessor",preproc),
