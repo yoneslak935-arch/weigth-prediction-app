@@ -41,6 +41,11 @@ weidth_human = {
         60,64,65,68,70,72,73,74,75,80
     ]
 }
+st.set_page_config(
+    page_title="پیش بینی وزن",
+    page_icon="⚖️",
+    layout="centered"
+)
 st.markdown("""
 <style>
 html,body,[class*="st-"]{
@@ -49,11 +54,6 @@ html,body,[class*="st-"]{
 }
 </style>
 """,unsafe_allow_html=True)
-st.set_page_config(
-    page_title="پیش بینی وزن",
-    page_icon="⚖️",
-    layout="centered"
-)
 
 st.title("⚖️نرم افزار پیش بینی وزن")
 st.divider()
