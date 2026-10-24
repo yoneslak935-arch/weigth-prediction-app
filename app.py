@@ -91,21 +91,26 @@ st.divider()#خط جدا کننده ما بین نوار عنوان و برنا�
 st.write("با وارد کردن سن،قد و وجنسیت وزن تخمینی را مشاهده کنید")
 st.caption("این برنامه آموزشی است و نتیجه آن تخمین تقریبی است،نه ارزیابی پزشکی")
 st.write("الگوی ماشین وزن را پیش بینی می کند")
-st.subheader("اطلاعات فردی")
-age = st.number_input("سن",
-                      min_value=1,
-                      max_value=100,
-                      value=25)
-height = st.number_input("قد به سانتی متر",
-                         min_value=50,
-                         max_value=250,
-                         value=170)
-gender = st.selectbox("جنسیت",
-                      ["woman","man"])
-st.write("سن وارد شده:",age)
-st.write("قد وراد شده:",height)
-st.write("جنسیت انتخاب شده",gender)
-#انتخاب الگوریتم
+with st.container(border=True):
+    st.subheader("اطلاعات فردی")
+    age = st.number_input(
+        "سن",
+        min_value=1,
+        max_value=100,
+        value=25)
+    height = st.number_input(
+        "قد به سانتی متر",
+        min_value=50,
+        max_value=250,
+        value=170)
+    gender = st.selectbox(
+        "جنسیت",
+        ["woman","man"])
+with st.container(border=True):
+    st.write("سن وارد شده:",age)
+    st.write("قد وراد شده:",height)
+    st.write("جنسیت انتخاب شده",gender)
+    #انتخاب الگوریتم
 st.subheader("select algoritm")
 model_name = st.selectbox("select your algoritm:",
                           ["KNN","Random Forest"],
