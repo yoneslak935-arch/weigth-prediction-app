@@ -147,6 +147,7 @@ if st.button("prediction weidth"):
         }])
         prediction = model.predict(new_human)
         st.subheader("prediction result:")
+        st.info(f"select algoritm:{model_name}")
         st.success(f"prediction weidth:{prediction[0]:.1f} kg")
         st.metric(
             label="mae for error prediction",
