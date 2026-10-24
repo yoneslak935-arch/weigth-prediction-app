@@ -54,7 +54,19 @@ html,body,[class*="st-"]{
 }
 </style>
 """,unsafe_allow_html=True)
-
+st.markdown("""
+<style>
+.stApp{
+   background-color: blue;
+}
+h1{
+   color:black;
+}
+h2,h3{
+   color:red;
+}
+</style>
+""",unsafe_allow_html=True)
 st.title("⚖️نرم افزار پیش بینی وزن")
 st.divider()
 st.divider()
