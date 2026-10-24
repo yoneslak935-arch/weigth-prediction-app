@@ -41,6 +41,14 @@ weidth_human = {
         60,64,65,68,70,72,73,74,75,80
     ]
 }
+st.markdown("""
+<style>
+html,body,[class*="st-"]{
+    direction:rtl;
+    text-align:right;
+}
+</style>
+""",unsafe_allow_html=True)
 st.set_page_config(
     page_title="پیش بینی وزن",
     page_icon="⚖️",
