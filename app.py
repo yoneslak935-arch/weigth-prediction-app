@@ -41,7 +41,14 @@ weidth_human = {
         60,64,65,68,70,72,73,74,75,80
     ]
 }
-st.title("نرم افزار پیش بینی وزن")
+st.set_page_config(
+    page_title="پیش بینی وزن",
+    page_icon="⚖️",
+    layout="centered"
+)
+
+st.title("⚖️نرم افزار پیش بینی وزن")
+st.divider()
 st.divider()
 #توضیح نرم افزار به بازدیدکنندگان
 st.markdown("""
