@@ -257,5 +257,7 @@ if st.button("prediction weidth",
             label="report download",
             data=report,
             file_name="weidth_prediction.txt",
-            mime="text/plain"
+            mime="text/plain",
+            type="secondary",
+            use_container_width=True
         )
