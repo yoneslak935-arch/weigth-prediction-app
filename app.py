@@ -91,7 +91,9 @@ model_name = st.selectbox("select your algoritm:",
                           ["KNN","Random Forest"],
                           key="model_choice")
 st.write("selected algoritm is :",model_name)
-if st.button("prediction weidth"):
+if st.button("prediction weidth",
+             type="primary",
+             use_container_width=True):
     df = pd.DataFrame(weidth_human)
     x = df[["age","gender","height"]]
     y = df["weidth"]
