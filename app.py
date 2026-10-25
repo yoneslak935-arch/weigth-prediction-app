@@ -105,6 +105,11 @@ if st.session_state["page"]=="home":
         ):
             st.session_state["page"]="about_me"
             st.rerun()
+elif st.session_state["page"]=="weight":
+    st.title("⚖️پیش بینی وزن")
+    if st.button("🏠بازگشت به صفحه اصلی"):
+        st.session_state["page"]="home"
+        st.rerun()
 st.title("⚖️نرم افزار پیش بینی وزن")
 st.divider()
 st.divider()
