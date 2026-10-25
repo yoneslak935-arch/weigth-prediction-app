@@ -67,6 +67,8 @@ h2,h3{
 }
 </style>
 """,unsafe_allow_html=True)
+if "page" not in st.session_state:
+    st.session_state["page"]="home"
 st.title("🏠 برنامه های من")
 st.caption(
     "به مجموعه برنامه های هوشمند من خوش آمدید" \
