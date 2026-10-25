@@ -67,6 +67,37 @@ h2,h3{
 }
 </style>
 """,unsafe_allow_html=True)
+st.title("🏠 برنامه های من")
+st.caption(
+    "به مجموعه برنامه های هوشمند من خوش آمدید" \
+    "از منوی زیر برنامه مورد نظر را انتخاب کنید"
+)
+st.divider()
+col1,col2,col3 = st.columns(3)
+with col1:
+    st.markdown("###⚖️پیش بینی وزن")
+    if st.button(
+    "پیش بینی وزن",
+    type="primary",
+    use_container_width=True
+    ):
+        st.session_state["page"]="weight"
+with col2:
+    st.markdown("###🧮ماشین حساب")
+    if st.button(
+        "ماشین حساب",
+        type="primary",
+        use_container_width=True
+    ):
+        st.session_state["page"]="calculator"
+with col3:
+    st.markdown("###📝درباره برنامه")
+    if st.button(
+        "درباره برنامه",
+        type="primary",
+        use_container_width=True
+    ):
+        st.session_state["page"]="about_me"
 st.title("⚖️نرم افزار پیش بینی وزن")
 st.divider()
 st.divider()
